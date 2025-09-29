@@ -4,7 +4,7 @@ use std::time::Duration;
 fn main() {
     thread::spawn(||{
         for i in 0..20{
-            println!("Sou a thread. Contador = {i}");
+            println!("\tSou a thread. Contador = {i}");
             thread::sleep(Duration::from_millis(300));
         }
     });
