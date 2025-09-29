@@ -13,13 +13,13 @@ fn main() {
         handles.push(h);
     }
 
-
-
     for i in 0..10 {
         println!("I'm the main Thread! Count is {i}");
         thread::sleep(Duration::from_secs(1));
     }
 
-    h.join().unwrap();
+    for h in handles{
+        h.join().unwrap();
+    }
 }
 
